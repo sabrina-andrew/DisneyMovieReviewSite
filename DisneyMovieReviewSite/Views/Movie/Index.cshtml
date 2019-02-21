@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<DisneyMovieReviewSite.Models.Movie>
+
 @{
     Layout = null;
 }
@@ -21,9 +22,12 @@
 
     <h1>Disney Movies</h1>
     <ol>
-        <li><a href="/Movie/Details/1">The Little Mermaid</a> <img src="~/Images/TheLittleMermaid.jpg" /></li>
-        <li><a href="/Movie/Details/2">Aladdin</a> <img src="~/Images/Aladdin.jpeg" /></li>
-        <li><a href="Movie/Details/3"></a> <img src="~/Images/LionKing.jpeg" /></li>
+        @foreach (var movie in Model)
+        {
+            <li><a href="/Movie/Details/@movie.ID">@movie.Name</a> <img src="~/Images/TheLittleMermaid.jpg" /></li>
+        }
+        
+        
     </ol>
 </body>
 </html>
