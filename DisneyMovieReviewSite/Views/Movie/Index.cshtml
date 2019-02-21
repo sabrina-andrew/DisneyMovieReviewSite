@@ -24,7 +24,7 @@
     <ol>
         @foreach (var movie in Model)
         {
-            <li><a href="/Movie/Details/@movie.ID">@movie.Name</a> <img src="~/Images/TheLittleMermaid.jpg" /></li>
+            <li><a href="/Movie/Details/@movie.ID">@movie.Name</a> <img src=@movie.ImgPath /></li>
         }
         
         
