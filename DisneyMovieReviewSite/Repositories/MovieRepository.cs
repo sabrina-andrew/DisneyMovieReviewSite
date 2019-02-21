@@ -20,9 +20,9 @@ namespace DisneyMovieReviewSite.Repositories
             return movies.Values.ToList();
         }
 
-        public Movie GetByID(int ID)
+        public Movie GetByID(int id)
         {
-            return movies[ID];
+            return movies[id];
         }
     }
 }

@@ -9,24 +9,6 @@ namespace DisneyMovieReviewSite.Controllers
 {
     public class HomeController : Controller
     {
-        MovieRepository movieRepo;
-
-        public HomeController()
-        {
-            movieRepo = new MovieRepository();
-        }
-
-        public ViewResult Index()
-        {
-            return View();
-        }
-
-        public ViewResult Details(int id)
-        {
-            var model = movieRepo.GetByID(id);
-            return View();
-        }
-
-
+     
     }
 }
