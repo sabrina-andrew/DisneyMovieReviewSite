@@ -10,9 +10,26 @@ namespace DisneyMovieReviewSite.Repositories
     {
         Dictionary<int, Movie> movies = new Dictionary<int, Movie>()
         {
-            {1, new Movie() {ID = 1, Name = "The Little Mermaid" } },
-            {2, new Movie() {ID = 2, Name = "Aladdin" } },
-            {3, new Movie() {ID = 3, Name = "Lion King" } }
+            {1, new Movie()
+            {
+                ID = 1,
+                Name = "The Little Mermaid", 
+                ImgPath = "~/Images/TheLittleMermaid.jpg"
+            } },
+
+            {2, new Movie()
+            {
+                ID = 2,
+                Name = "Aladdin",
+                ImgPath = "~/Images/Aladdin.jpeg"
+            } },
+
+            {3, new Movie()
+            {
+                ID = 3,
+                Name = "Lion King",
+                ImgPath = "~/Images/LionKing.jpeg"
+            } }
         };
 
         public IEnumerable<Movie> GetAll()

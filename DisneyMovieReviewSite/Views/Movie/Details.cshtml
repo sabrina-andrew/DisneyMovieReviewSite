@@ -1,4 +1,5 @@
-﻿
+﻿@model DisneyMovieReviewSite.Models.Movie
+
 @{
     Layout = null;
 }
@@ -8,11 +9,22 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>@Model.Name Details</title>
+    <link rel="stylesheet" href="~/Styles/Main.css" />
 </head>
 <body>
-    <h1>The Little Mermaid</h1>
-    <p>I love The Little Mermaid</p>
-    <img src="~/Images/TheLittleMermaid.jpg" />
+
+    <!-- NavBar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="/Home">HOME</a></li>
+            <li><a href="/Movie">MOVIES</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>@Model.Name</h1>
+    <p>@Model.Content</p>
+    <img src="@Model.ImgPath" />
 </body>
 </html>

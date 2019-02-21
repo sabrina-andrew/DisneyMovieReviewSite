@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<DisneyMovieReviewSite.Models.Movie>
+
 @{
     Layout = null;
 }
@@ -9,13 +10,26 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="~/Styles/Main.css" />
 </head>
 <body>
-<h1>Disney Movies</h1>
-<ol>
-    <li><a href="/Movie/Details/1">The Little Mermaid</a> <img src="~/Images/TheLittleMermaid.jpg"/></li>    
-    <li>Aladdin <img src="~/Images/Aladdin.jpeg" /></li>
-    <li>Lion King <img src="~/Images/LionKing.jpeg" /></li>
+
+    <!-- NavBar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="/Home">HOME</a></li>
+            <li><a href="/Movie">MOVIES</a></li>
+        </ul>
+    </nav>
+
+    <h1>Disney Movies</h1>
+    <ol>
+        @foreach (var movie in Model)
+        {
+            <li><a href="/Movie/Details/@movie.ID">@movie.Name</a> <img src="@movie.ImgPath" /></li>
+        }
+
+
     </ol>
 </body>
 </html>
