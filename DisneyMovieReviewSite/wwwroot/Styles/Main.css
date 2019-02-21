@@ -1,0 +1,43 @@
+﻿
+
+/* Main.css should only have navbar and footer since 
+  every view or webpage has the same navbar and footer style*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* NavBar */
+#navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: flex-end;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+#navbar ul li a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        transition: 0.3s ease-out;
+        padding: 3px;
+        margin: 0 0.25rem;
+        color: white;
+        transition: border 0.2s linear;
+
+}
+
+#navbar ul li a:hover {
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: border 0.2s linear;
+}
