@@ -16,13 +16,6 @@ namespace DisneyMovieReviewSite.Tests
             Assert.IsType<ViewResult>(result);
         }
 
-        [Fact]
-        public void Details_Has_A_View()
-        {
-            var underTest = new HomeController();
-            var result = underTest.Details();
-
-            Assert.IsType<ViewResult>(result);
-        }
+       
     }
 }
