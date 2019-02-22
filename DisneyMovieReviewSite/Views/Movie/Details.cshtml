@@ -24,7 +24,15 @@
 
 
     <h1>@Model.Name</h1>
-    <p>@Model.Content</p>
+    <p>@Model.Synopsis</p>
     <img src="@Model.ImgPath" />
+    <p>@Model.Review</p>
+    <ul>
+        <li>Release Year: @Model.ReleaseYear</li>
+        <li>Category: @Model.Category</li>
+        <li>Length: @Model.RunTime Minutes</li>
+        <li>Rating: @Model.Rating out of 5</li>
+
+    </ul>
 </body>
 </html>
