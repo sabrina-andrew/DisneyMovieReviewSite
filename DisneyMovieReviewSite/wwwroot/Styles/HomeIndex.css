@@ -33,11 +33,11 @@ p {
 
 header a {
     color: white;
-    background: pink;
+    background: #D4AF37;
     padding: 0.5rem 2rem;
     border: none;
     border-radius: 5px;
-    margin: 0 30rem;
+    align-self: center;
 }
 
 
