@@ -1,0 +1,43 @@
+﻿body {
+    background-color: #E0E0E0;
+}
+
+
+h1{
+    margin-left: 4rem;
+}
+img {
+    margin-bottom: 1rem;
+    max-height: 7rem;
+    display: inline-block;
+    max-width: 5rem;
+    border: 1px solid black;
+   
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+
+}
+
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.7);
+    border-radius: 2px;
+    width: 10rem;
+    text-align: center;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.movie-container p {
+    margin-bottom: 0;
+}
+
+
