@@ -45,6 +45,18 @@ namespace DisneyMovieReviewSite.Repositories
                 Category = "Animation",
                 RunTime = 89,
                 Rating = 4.0,
+            } },
+
+            {4, new Movie()
+            {
+                ID = 4,
+                Name = "Lion King",
+                ImgPath = "/Images/LionKing.jpeg",
+                Synopsis = "Simba is a young lion set to inherit the kingdom from his father, Mufasa. When Simba's evil uncle Scar betrays him, Simba escapes into exile, and must find the courage to reclaim his birthright.",
+                ReleaseYear = 1994,
+                Category = "Animation",
+                RunTime = 89,
+                Rating = 4.0,
             } }
         };
 
