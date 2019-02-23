@@ -23,23 +23,28 @@
         </ul>
     </nav>
 
-    <h1>Disney Movies</h1>
-    <div class = "movies-container">
-        <ul>
-
-        @foreach (var movie in Model)
-        {
-                <li>
-                    <div class="movie-container">
-                        <img id="image" src="@movie.ImgPath" />
-                        <a href="/Movie/Details/@movie.ID">@movie.Name</a>
-                        <p>@movie.ReleaseYear <br>
-                        @movie.Rating out of 5 Stars</p>
+    <div class="movie-list">
+        <div class="movie-list-header">
+            <h1>Featured Movies</h1>
+        </div>
+        <div class="movies-container">
+            <ul>
+                @foreach (var movie in Model)
+                {
+                    <li>
+                        <div class="movie-container">
+                            <img id="image" src="@movie.ImgPath" />
+                            <a href="/Movie/Details/@movie.ID">@movie.Name</a>
+                            <p>
+                                @movie.ReleaseYear <br>
+                            @movie.Rating out of 5 Stars
+                        </p>
                     </div>
-                </li>           
-        }
-        </ul> 
+                </li>
+            }
+            </ul>
 
+        </div>
     </div>
 </body>
 </html>
