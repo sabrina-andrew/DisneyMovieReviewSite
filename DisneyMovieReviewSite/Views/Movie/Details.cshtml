@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@Model.Name Details</title>
     <link rel="stylesheet" href="~/Styles/Main.css" />
+    <link rel="stylesheet" href="~/Styles/Details.css" />
 </head>
 <body>
 
@@ -22,10 +23,9 @@
         </ul>
     </nav>
 
-
+<div class="movie-details">
     <h1>@Model.Name</h1>
-    <p>@Model.Synopsis</p>
-    <img src="@Model.ImgPath" />
+       <img class="details-image"src="@Model.ImgPath" />
     <p>@Model.Review</p>
     <ul>
         <li>Release Year: @Model.ReleaseYear</li>
@@ -34,5 +34,7 @@
         <li>Rating: @Model.Rating out of 5</li>
 
     </ul>
+    <p>@Model.Synopsis</p>
+    </div>
 </body>
 </html>
