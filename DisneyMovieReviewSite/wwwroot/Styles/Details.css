@@ -7,19 +7,35 @@
 }
 .movie-details {
     display: grid;
-    grid-template-rows: 4;
-    grid-template-columns: 30rem;
+    grid-template-columns: 3rem 3rem;
+    grid-template-rows: 1rem 5rem;
     padding: 0;
     margin: 0;
     justify-content: center;
     text-align: center;
     grid-gap: 0;
-}
-.details-image {
+    background: white;
     
-    place-self: center;
+}
+h1{
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+ }
+.details-image {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     border: 1px solid black;
-}
-ul{
-    place-self: center;
-}
+ }
+p{
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 /3;
+ }
+ul {    
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+ }
+
