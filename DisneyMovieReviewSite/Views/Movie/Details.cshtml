@@ -23,18 +23,48 @@
         </ul>
     </nav>
 
-<div class="movie-details">
-    <h1>@Model.Name</h1>
-       <img class="details-image"src="@Model.ImgPath" />
-    <p>@Model.Review</p>
-    <ul>
-        <li>Release Year: @Model.ReleaseYear</li>
-        <li>Category: @Model.Category</li>
-        <li>Length: @Model.RunTime Minutes</li>
-        <li>Rating: @Model.Rating out of 5</li>
+    <!-- Section: Detail Card -->
+    <section class="movie-details">
+        <div class="container">
+            <h1>Movie Details</h1>
+            <div class="movie-container">
+                <article class="card">
+                    <img class="details-image" src="@Model.ImgPath" />
+                    <div>
+                        <h3>@Model.Name</h3>
+                        <ul class="movie-info">
+                            <li>Release Year: @Model.ReleaseYear</li>
+                            <li>Category: @Model.Category</li>
+                            <li>Length: @Model.RunTime Minutes</li>
+                            <li>Rating: @Model.Rating out of 5</li>
+                        </ul>
+                        <p><strong>Synopsis:</strong> @Model.Synopsis</p>
+                        <p><strong>Review:</strong> @Model.Review</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    </ul>
-    <p>@Model.Synopsis</p>
+
+
+
+
+
+    <!-- 
+        <div class="movie-details">
+        <h1>@Model.Name</h1>
+        <img class="details-image" src="@Model.ImgPath" />
+        <p>@Model.Review</p>
+        <ul>
+            <li>Release Year: @Model.ReleaseYear</li>
+            <li>Category: @Model.Category</li>
+            <li>Length: @Model.RunTime Minutes</li>
+            <li>Rating: @Model.Rating out of 5</li>
+
+        </ul>
+        <p>@Model.Synopsis</p>
     </div>
+        -->
 </body>
 </html>

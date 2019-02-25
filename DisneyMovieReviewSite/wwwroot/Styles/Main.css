@@ -1,6 +1,10 @@
 ﻿/* Main.css should only have navbar and footer since 
   every view or webpage has the same navbar and footer style*/
 
+
+@import url('https://fonts.googleapis.com/css?family=Tangerine:700');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 html, body {
     margin: 0;
     padding: 0;

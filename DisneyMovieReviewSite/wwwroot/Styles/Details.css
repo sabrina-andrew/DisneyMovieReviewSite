@@ -1,41 +1,45 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Tangerine:700');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
     background-color: #E0E0E0;
     font-family: 'Oswald';
     text-wrap: normal;
     margin: 0;
     padding: 0;
 }
-.movie-details {
-    display: grid;
-    grid-template-columns: 3rem 3rem;
-    grid-template-rows: 1rem 5rem;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-    text-align: center;
-    grid-gap: 0;
-    background: white;
-    
+
+.container {
+    margin: 0 10rem;
 }
-h1{
+
+.container h1 {
+    background: white;
+    padding: 0.5rem 2rem;
+    margin: 1rem;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    display: inline-block;
+    font-size: 2rem;
+}
+
+#movie-details .movie-container {
     display: grid;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
- }
-.details-image {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.card {
     display: grid;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    border: 1px solid black;
- }
-p{
-    display: grid;
-    grid-column: 2 / 3;
-    grid-row: 2 /3;
- }
-ul {    
-    display: grid;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
- }
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    background: white;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+
+
+
+
 
