@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisneyMovieReviewSite", "DisneyMovieReviewSite\DisneyMovieReviewSite.csproj", "{6DE1221A-6C58-4FF2-8F5D-CAB8E4EACDE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisneyMovieReviewSite", "DisneyMovieReviewSite\DisneyMovieReviewSite.csproj", "{6DE1221A-6C58-4FF2-8F5D-CAB8E4EACDE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisneyMovieReviewSite.Tests", "DisneyMovieReviewSite.Tests\DisneyMovieReviewSite.Tests.csproj", "{3FB8880D-90FE-4515-B9D4-95968D5E90D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisneyMovieReviewSite.Tests", "DisneyMovieReviewSite.Tests\DisneyMovieReviewSite.Tests.csproj", "{3FB8880D-90FE-4515-B9D4-95968D5E90D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

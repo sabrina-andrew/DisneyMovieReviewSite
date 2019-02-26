@@ -17,5 +17,6 @@ namespace DisneyMovieReviewSite.Models
         public string Review { get; set; }
         public int ReleaseYear { get; set; }
         public int RunTime { get; set; }
+        public string UserName { get; set; }
     }
 }
