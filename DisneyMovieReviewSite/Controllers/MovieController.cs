@@ -11,9 +11,9 @@ namespace DisneyMovieReviewSite.Controllers
     {
         MovieRepository movieRepo;
 
-        public MovieController()
+        public MovieController(MovieRepository movieRepo)
         {
-            movieRepo = new MovieRepository();
+            this.movieRepo = movieRepo;
         }
 
         public ViewResult Index()

@@ -13,7 +13,7 @@ namespace DisneyMovieReviewSite.Tests
         [Fact]
         public void Index_Returns_A_View_Result()
         {
-            var underTest = new MovieController();
+            var underTest = new MovieController(null);
             var result = underTest.Index();
 
             Assert.IsType<ViewResult>(result);
@@ -22,7 +22,7 @@ namespace DisneyMovieReviewSite.Tests
         [Fact]
         public void Details_Has_A_View()
         {
-            var underTest = new MovieController();
+            var underTest = new MovieController(null);
             var result = underTest.Details(1);
             
             Assert.IsType<ViewResult>(result);
