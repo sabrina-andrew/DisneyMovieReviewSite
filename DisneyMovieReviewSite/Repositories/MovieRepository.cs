@@ -16,14 +16,32 @@ namespace DisneyMovieReviewSite.Repositories
             
         }
 
-        public IEnumerable<Movie> GetAll()
+        public int Count()
         {
-            return db.Movies.ToList();
+            return db.Movies.Count();
         }
 
+        public void Create(Movie movie)
+        {
+            db.Movies.Add(movie);
+            db.SaveChanges();
+        } 
         public Movie GetByID(int id)
         {
             return db.Movies.Single(movie=> movie.ID == id);
+        }
+        public void Delete(Movie movie)
+        {
+            db.Movies.Remove(movie);
+            db.SaveChanges();
+        }
+        public void Save()
+        {
+            db.SaveChanges();
+        }
+        public IEnumerable<Movie> GetAll()
+        {
+            return db.Movies.ToList();
         }
     }
 }
