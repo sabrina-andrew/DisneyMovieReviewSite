@@ -8,12 +8,10 @@ namespace DisneyMovieReviewSite.Repositories
 {
     public class MovieRepository
     {
-
         MovieContext db;
         public MovieRepository(MovieContext db)
         {
-            this.db = db;
-            
+            this.db = db;            
         }
 
         public int Count()

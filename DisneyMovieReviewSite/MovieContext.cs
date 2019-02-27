@@ -10,6 +10,8 @@ namespace DisneyMovieReviewSite
     public class MovieContext : DbContext 
     {
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -80,7 +82,14 @@ namespace DisneyMovieReviewSite
                     UserName = "DisneyReviewer",
                     Review = "Toy Story is a sheer delight to view on the screen. The characters are well done, the plot is exceptional, and the best thing of all, the film is entirely produced on the computer. The animation is extraordinary in it's ability to bring such great entertainment to the screen. The film also teaches some good lessons for the kids like friendship (mainly between Woody and Buzz Light-year). Spectacular entertainment all around and one of the best films Disney has come with."
                 });
-            
+
+            modelBuilder.Entity<Category>().HasData(
+
+               new Category() { ID = 1, CategoryName = "Animation" , Description = "Animation description"},
+               new Category() { ID = 2, CategoryName = "Pixar", Description = "Pixar description" },
+               new Category() { ID = 3, CategoryName = "Live Action", Description = "Live Action Description"}
+                );
+
             base.OnModelCreating(modelBuilder);
         }
     }

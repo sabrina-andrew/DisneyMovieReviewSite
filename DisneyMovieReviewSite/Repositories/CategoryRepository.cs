@@ -1,0 +1,27 @@
+﻿using DisneyMovieReviewSite.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace DisneyMovieReviewSite.Repositories
+{
+    public class CategoryRepository
+    {
+        MovieContext db;
+
+        public CategoryRepository(MovieContext db)
+        {
+            this.db = db; 
+        }
+        public Category GetCategory(int id)
+        {
+            return db.Categories.Single(category => category.ID == id);
+        }
+
+        public IEnumerable<Category> GetAll()
+        {
+            return db.Categories.ToList();
+        }
+    }
+}
