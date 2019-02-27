@@ -12,11 +12,12 @@ namespace DisneyMovieReviewSite.Models
         public string Name { get; set; }
         public string Synopsis { get; set; }
         public double Rating { get; set; }
-        public string Category { get; set; }
+        public Category Category { get; set; }
         public string ImgPath { get; set; }
         public string Review { get; set; }
         public int ReleaseYear { get; set; }
         public int RunTime { get; set; }
         public string UserName { get; set; }
+
     }
 }
