@@ -23,5 +23,10 @@ namespace DisneyMovieReviewSite.Repositories
         {
             return db.Categories.ToList();
         }
+
+        public Category GetByID(int id)
+        {
+            return db.Categories.Single(category => category.CategoryID == id);
+        }
     }
 }
