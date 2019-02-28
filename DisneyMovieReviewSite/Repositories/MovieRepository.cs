@@ -26,7 +26,7 @@ namespace DisneyMovieReviewSite.Repositories
         } 
         public Movie GetByID(int id)
         {
-            return db.Movies.Single(movie=> movie.ID == id);
+            return db.Movies.Single(movie=> movie.MovieID == id);
         }
         public void Delete(Movie movie)
         {

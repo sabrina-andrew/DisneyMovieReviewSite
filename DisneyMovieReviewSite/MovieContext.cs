@@ -28,12 +28,12 @@ namespace DisneyMovieReviewSite
 
                 new Movie()
                 {
-                    ID = 1,
+                    MovieID = 1,
                     Name = "The Little Mermaid",
                     ImgPath = "/Images/TheLittleMermaid.jpg",
                     Synopsis = "A mermaid named Ariel falls in love with a human prince, and must find her destiny with the help of family and friends.",
                     ReleaseYear = 1989,
-                    Category = "Animation",
+                    CategoryID = 1, 
                     RunTime = 85,
                     Rating = 5.0,
                     UserName = "Mr. Whiplash",
@@ -43,12 +43,12 @@ namespace DisneyMovieReviewSite
 
                 new Movie()
                 {
-                    ID = 2,
+                    MovieID = 2,
                     Name = "Aladdin",
                     ImgPath = "/Images/Aladdin.jpeg",
                     Synopsis = "Aladdin, a streetwise nobody from the land of Agrabah, finds a magical lamp that will allow his every wish to be granted. He must find a way to stop the evil Jafar and win the love of Princess Jasmine.",
                     ReleaseYear = 1992,
-                    Category = "Animation",
+                    CategoryID = 1,
                     RunTime = 91,
                     Rating = 4.0,
                     UserName = "DisneyFanatic23",
@@ -57,12 +57,12 @@ namespace DisneyMovieReviewSite
 
                 new Movie()
                 {
-                    ID = 3,
+                    MovieID = 3,
                     Name = "Lion King",
                     ImgPath = "/Images/LionKing.jpeg",
                     Synopsis = "Simba is a young lion set to inherit the kingdom from his father, Mufasa. When Simba's evil uncle Scar betrays him, Simba escapes into exile, and must find the courage to reclaim his birthright.",
                     ReleaseYear = 1994,
-                    Category = "Animation",
+                    CategoryID = 1,
                     RunTime = 89,
                     Rating = 4.0,
                     UserName = "DisneyLover",
@@ -71,12 +71,12 @@ namespace DisneyMovieReviewSite
 
                 new Movie()
                 {
-                    ID = 4,
+                    MovieID = 4,
                     Name = "Toy Story",
                     ImgPath = "/Images/ToyStory.jpg",
                     Synopsis = "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.",
                     ReleaseYear = 1995,
-                    CategoryID = 1,
+                    CategoryID = 2,
                     RunTime = 81,
                     Rating = 4.0,
                     UserName = "DisneyReviewer",
@@ -85,9 +85,9 @@ namespace DisneyMovieReviewSite
 
             modelBuilder.Entity<Category>().HasData(
 
-               new Category() { ID = 1, CategoryName = "Animation" , Description = "Animation description"},
-               new Category() { ID = 2, CategoryName = "Pixar", Description = "Pixar description" },
-               new Category() { ID = 3, CategoryName = "Live Action", Description = "Live Action Description"}
+               new Category() { CategoryID = 1, CategoryName = "Animation" , Description = "Animation description"},
+               new Category() { CategoryID = 2, CategoryName = "Pixar", Description = "Pixar description" },
+               new Category() { CategoryID = 3, CategoryName = "Live Action", Description = "Live Action Description"}
                 );
 
             base.OnModelCreating(modelBuilder);
