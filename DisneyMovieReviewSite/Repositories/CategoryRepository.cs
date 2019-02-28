@@ -16,7 +16,7 @@ namespace DisneyMovieReviewSite.Repositories
         }
         public Category GetCategory(int id)
         {
-            return db.Categories.Single(category => category.ID == id);
+            return db.Categories.Single(category => category.CategoryID == id);
         }
 
         public IEnumerable<Category> GetAll()
