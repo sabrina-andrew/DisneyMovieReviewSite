@@ -21,5 +21,15 @@ namespace DisneyMovieReviewSite.Controllers
             var model = categoryRepo.GetAll();
             return View(model);
         }
+        public ViewResult Index()
+        {
+            var model = categoryRepo.GetAll();
+            return View(model);
+        }
+        public ViewResult Details(int id)
+        {
+            var model = categoryRepo.GetByID(id);
+            return View(model);
+        }
     }
 }
