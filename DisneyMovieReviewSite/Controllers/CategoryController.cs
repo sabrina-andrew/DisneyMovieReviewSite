@@ -15,12 +15,7 @@ namespace DisneyMovieReviewSite.Controllers
         {
             this.categoryRepo = categoryRepo;
         }
-
-        public ViewResult Category()
-        {
-            var model = categoryRepo.GetAll();
-            return View(model);
-        }
+       
         public ViewResult Index()
         {
             var model = categoryRepo.GetAll();

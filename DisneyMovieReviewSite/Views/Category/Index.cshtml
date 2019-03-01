@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="~/Styles/CategoryIndex.css" />
 </head>
 <body>
+    <!-- NavBar -->
     <nav id="navbar">
         <ul>
             <li><a href="/Home">HOME</a></li>
@@ -20,20 +21,26 @@
             <li><a href="/Movie">MOVIES</a></li>
         </ul>
     </nav>
-    <div id="categoriesContainer">
-        <header>Movie Categories</header>
-        <div class="categorycard">
-            @foreach (var category in Model)
-            {
-                <a href="/Category/Details/@category.CategoryID">
 
-                    <div class="category">
-                        <h3>@category.CategoryName</h3>
-                        <p>@category.Description</p>
-                    </div>
-                </a>
-            }
+    <!-- Categories -->
+    <section id="container">
+        <div class="categories-container">
+            <header>
+                <h1>Movie Categories</h1>
+            </header>
+            <div class="category-card">
+                @foreach (var category in Model)
+                {
+                    <a href="/Category/Details/@category.CategoryID">
+
+                        <div class="category">
+                            <h3>@category.CategoryName</h3>
+                            <p>@category.Description</p>
+                        </div>
+                    </a>
+                }
+            </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>
