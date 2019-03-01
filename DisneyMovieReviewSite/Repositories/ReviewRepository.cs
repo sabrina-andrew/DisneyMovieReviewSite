@@ -41,5 +41,11 @@ namespace DisneyMovieReviewSite.Repositories
         {
             return db.Reviews.ToList();
         }
+
+        public void Edit(Review review)
+        {
+            db.Reviews.Update(review);
+            db.SaveChanges();
+        }
     }
 }

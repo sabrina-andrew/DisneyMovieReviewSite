@@ -11,7 +11,7 @@ namespace DisneyMovieReviewSite.Repositories
         MovieContext db;
         public MovieRepository(MovieContext db)
         {
-            this.db = db;            
+            this.db = db;
         }
 
         public int Count()
@@ -23,10 +23,10 @@ namespace DisneyMovieReviewSite.Repositories
         {
             db.Movies.Add(movie);
             db.SaveChanges();
-        } 
+        }
         public Movie GetByID(int id)
         {
-            return db.Movies.Single(movie=> movie.MovieID == id);
+            return db.Movies.Single(movie => movie.MovieID == id);
         }
         public void Delete(Movie movie)
         {
@@ -40,6 +40,12 @@ namespace DisneyMovieReviewSite.Repositories
         public IEnumerable<Movie> GetAll()
         {
             return db.Movies.ToList();
+        }
+
+        public void Edit(Movie movie)
+        {
+            db.Update(movie);
+            db.SaveChanges();
         }
     }
 }

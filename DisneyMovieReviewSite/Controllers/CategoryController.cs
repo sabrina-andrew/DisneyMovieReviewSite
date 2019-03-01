@@ -1,4 +1,5 @@
-﻿using DisneyMovieReviewSite.Repositories;
+﻿using DisneyMovieReviewSite.Models;
+using DisneyMovieReviewSite.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -26,5 +27,7 @@ namespace DisneyMovieReviewSite.Controllers
             var model = categoryRepo.GetByID(id);
             return View(model);
         }
+
+   
     }
 }

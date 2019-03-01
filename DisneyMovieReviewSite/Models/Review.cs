@@ -11,6 +11,8 @@ namespace DisneyMovieReviewSite.Models
         public int MovieID { get; set; }
         public virtual Movie Movie { get; set; }
         public string ReviewContent { get; set; }
+
         
+
     }
 }
