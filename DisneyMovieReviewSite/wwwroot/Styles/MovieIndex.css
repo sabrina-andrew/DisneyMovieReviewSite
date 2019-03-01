@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Tangerine:700');
+﻿    azzq@import url('https://fonts.googleapis.com/css?family=Tangerine:700');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
 body {
@@ -35,7 +35,7 @@ img {
 .movie-list {
     display: flex;
     flex-direction: column;
-    margin: 2rem;
+    margin: 0rem 10rem;
     align-items: flex-start;
 }
 
