@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<DisneyMovieReviewSite.Models.Review>
+
 @{
     Layout = null;
 }
@@ -8,9 +9,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>Index</title>
     <link rel="stylesheet" href="~/Styles/Main.css" />
-    <link rel="stylesheet" href="~/Styles/CategoryDetails.css" />
 </head>
 <body>
     <!-- NavBar -->
@@ -20,8 +20,23 @@
             <li><a href="/Category">CATEGORIES</a></li>
             <li><a href="/Movie">MOVIES</a></li>
             <li><a href="/Review">REVIEWS</a></li>
+
         </ul>
     </nav>
-    Category Details
+    <header>
+        <h1>Movie Reviews</h1>
+    </header>
+    <div>
+        @foreach (var review in Model)
+        {
+            <a href="/Category/Details/@review.ReviewID">
+
+                <div class="category">
+                    <h3>@review.ReviewID</h3>
+                    <p>@review.ReviewContent</p>
+                </div>
+            </a>
+        }
+    </div>
 </body>
 </html>
