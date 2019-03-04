@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Review\" />
+    <Compile Remove="Migrations\20190301202225_AddedReviewsRepoControllerClass.cs" />
+    <Compile Remove="Migrations\20190301202225_AddedReviewsRepoControllerClass.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 

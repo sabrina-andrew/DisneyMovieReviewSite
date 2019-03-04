@@ -9,7 +9,6 @@ namespace DisneyMovieReviewSite.Repositories
     public class CategoryRepository
     {
         MovieContext db;
-
         public CategoryRepository(MovieContext db)
         {
             this.db = db; 
