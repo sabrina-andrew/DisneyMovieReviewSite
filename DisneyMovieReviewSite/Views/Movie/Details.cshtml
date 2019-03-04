@@ -39,16 +39,16 @@
                             <li>Category: @Model.Category.CategoryName</li>
                             <li>Length: @Model.RunTime Minutes</li>
                             <li>Rating: @Model.Rating out of 5</li>
-                            
+
                         </ul>
                         <p><strong>Synopsis:</strong> @Model.Synopsis</p>
                         <p><em>@Model.UserName</em></p>
 
-                        @foreach(var review in Model.Reviews)
+                        @foreach (var review in Model.Reviews)
                         {
-                        <p>@review.ReviewContent</p>
-                        <p>@review.UserRating out of 5</p>
-                        <p>@review.UserName</p>
+                            <p>@review.ReviewContent</p>
+                            <p>@review.UserRating out of 5</p>
+                            <p>@review.UserName</p>
                         }
                         <div>
                             <a href="/Movie/Edit/@Model.MovieID">
@@ -58,6 +58,11 @@
                         <div>
                             <a href="/Movie/Delete/@Model.MovieID">
                                 <input type="button" value="Delete Movie" class="btn btn-default" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/Review/Create/@Model.MovieID">
+                                <input type="button" value="Create Review" class="btn btn-default" />
                             </a>
                         </div>
                     </div>
