@@ -1,5 +1,5 @@
 ﻿@model DisneyMovieReviewSite.Models.Movie
-
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = null;
 }
@@ -21,7 +21,7 @@
             <li><a href="/Home">HOME</a></li>
             <li><a href="/Category">CATEGORIES</a></li>
             <li><a href="/Movie">MOVIES</a></li>
-            <li><a href="/Review">REVIEWS</a></li>
+            
         </ul>
     </nav>
 
@@ -36,16 +36,34 @@
                         <h3>@Model.Name</h3>
                         <ul class="movie-info">
                             <li>Release Year: @Model.ReleaseYear</li>
-                            <li>Category: @Model.Category</li>
+                            <li>Category: @Model.Category.CategoryName</li>
                             <li>Length: @Model.RunTime Minutes</li>
                             <li>Rating: @Model.Rating out of 5</li>
+                            
                         </ul>
                         <p><strong>Synopsis:</strong> @Model.Synopsis</p>
                         <p><em>@Model.UserName</em></p>
+
+                        @foreach(var review in Model.Reviews)
+                        {
+                        <p>@review.ReviewContent</p>
+                        <p>@review.UserRating out of 5</p>
+                        <p>@review.UserName</p>
+                        }
+                        <div>
+                            <a href="/Movie/Edit/@Model.MovieID">
+                                <input type="button" value="Edit Movie" class="btn btn-default" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/Movie/Delete/@Model.MovieID">
+                                <input type="button" value="Delete Movie" class="btn btn-default" />
+                            </a>
+                        </div>
                     </div>
                 </article>
             </div>
         </div>
-    </section>   
-  </body>
+    </section>
+</body>
 </html>

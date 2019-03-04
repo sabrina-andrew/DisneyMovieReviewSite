@@ -18,6 +18,7 @@ namespace DisneyMovieReviewSite.Models
         public string UserName { get; set; }
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
-        
+        public virtual List<Review> Reviews { get; set; }
+
     }
 }

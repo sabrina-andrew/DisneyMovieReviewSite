@@ -46,12 +46,13 @@ namespace DisneyMovieReviewSite.Controllers
         public ViewResult Delete(int id)
         {
             var model = movieRepo.GetByID(id);
-            return View();
+            return View(model);
         }
 
         [HttpPost]
         public ActionResult Delete(Movie movie)
         {
+           
             movieRepo.Delete(movie);
             return RedirectToAction("Index");
         }
