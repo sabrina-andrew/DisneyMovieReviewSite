@@ -21,7 +21,6 @@
             <li><a href="/Home">HOME</a></li>
             <li><a href="/Category">CATEGORIES</a></li>
             <li><a href="/Movie">MOVIES</a></li>
-            
         </ul>
     </nav>
 
@@ -43,13 +42,18 @@
                         </ul>
                         <p><strong>Synopsis:</strong> @Model.Synopsis</p>
                         <p><em>@Model.UserName</em></p>
-
+                        <h3>Reviews</h3>
                         @foreach (var review in Model.Reviews)
                         {
+                        <div class="user-review">
                             <p>@review.ReviewContent</p>
                             <p>@review.UserRating out of 5</p>
                             <p>@review.UserName</p>
+                            <a href="/Review/Delete/@review.ReviewID">Delete</a>
+                            <a href="/Review/Edit/@review.ReviewID">Edit</a>
+                        </div>
                         }
+
                         <div>
                             <a href="/Movie/Edit/@Model.MovieID">
                                 <input type="button" value="Edit Movie" class="btn btn-default" />

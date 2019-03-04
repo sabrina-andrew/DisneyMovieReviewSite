@@ -10,21 +10,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Styles/Main.css" />
     <title>Edit</title>
 </head>
 <body>
-
+    <nav id="navbar">
+        <ul>
+            <li><a href="/Home">HOME</a></li>
+            <li><a href="/Category">CATEGORIES</a></li>
+            <li><a href="/Movie">MOVIES</a></li>
+        </ul>
+    </nav>
     <h4>Movie</h4>
     <hr />
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Edit">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="MovieID" class="control-label"></label>
-                    <input asp-for="MovieID" class="form-control" />
-                    <span asp-validation-for="MovieID" class="text-danger"></span>
-                </div>
                 <div class="form-group">
                     <label asp-for="Name" class="control-label"></label>
                     <input asp-for="Name" class="form-control" />

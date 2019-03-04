@@ -49,14 +49,14 @@ namespace DisneyMovieReviewSite.Controllers
         public ViewResult Delete(int id)
         {
             var model = reviewRepo.GetByID(id);
-            return View();
+            return View(model);
         }
 
         [HttpPost]
         public ActionResult Delete(Review review)
         {
             reviewRepo.Delete(review);
-            return RedirectToAction("Index");
+            return RedirectToAction("../Movie/Index");
         }
 
         [HttpGet]
@@ -70,7 +70,7 @@ namespace DisneyMovieReviewSite.Controllers
         public ActionResult Edit(Review review)
         {
             reviewRepo.Edit(review);
-            return RedirectToAction("Details/" + review.ReviewID);
+            return RedirectToAction("../Movie/Details/" + review.MovieID);
         }
     }
 }

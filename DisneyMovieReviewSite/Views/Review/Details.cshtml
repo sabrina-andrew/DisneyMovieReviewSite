@@ -1,7 +1,5 @@
 ﻿@model DisneyMovieReviewSite.Models.Review
 
-
-
 @{
     Layout = null;
 }
@@ -11,9 +9,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Styles/Main.css" />
     <title> Review Details for @Model.ReviewID</title>
 </head>
 <body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="/Home">HOME</a></li>
+            <li><a href="/Category">CATEGORIES</a></li>
+            <li><a href="/Movie">MOVIES</a></li>
+        </ul>
+    </nav>
     Review Details
 </body>
 </html>
