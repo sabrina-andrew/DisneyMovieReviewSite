@@ -28,16 +28,21 @@ namespace DisneyMovieReviewSite.Controllers
         }
 
         [HttpGet]
-        public ViewResult Create()
+        public ViewResult Create(int id)
         {
-            return View();
+            var newReview = new Review()
+            {
+                MovieID = id
+            };
+
+            return View(newReview);
         }
 
         [HttpPost]
         public ActionResult Create(Review review)
         {
             reviewRepo.Create(review);
-            return RedirectToAction("Index");
+            return RedirectToAction("../Movie/Details/" + review.MovieID);
         }
 
         [HttpGet]
