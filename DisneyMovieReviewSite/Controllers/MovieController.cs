@@ -61,7 +61,6 @@ namespace DisneyMovieReviewSite.Controllers
         {
             var model = movieRepo.GetByID(id);
             return View(model);
-
         }
 
         [HttpPost]

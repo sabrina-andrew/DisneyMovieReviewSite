@@ -9,10 +9,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Styles/Main.css" />
     <title>Delete</title>
 </head>
 <body>
-
+    <nav id="navbar">
+        <ul>
+            <li><a href="/Home">HOME</a></li>
+            <li><a href="/Category">CATEGORIES</a></li>
+            <li><a href="/Movie">MOVIES</a></li>
+        </ul>
+    </nav>
     <h3>Are you sure you want to delete this?</h3>
     <div>
         <h4>Movie</h4>
@@ -67,7 +74,7 @@
                 @Html.DisplayFor(model => model.Category.CategoryID)
             </dd>
         </dl>
-        
+
         <form asp-action="Delete">
             <input type="hidden" asp-for="MovieID" />
             <input type="submit" value="Delete" class="btn btn-default" /> |
