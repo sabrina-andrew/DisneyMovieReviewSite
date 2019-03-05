@@ -53,14 +53,15 @@
                             <li>Release Year: @Model.ReleaseYear</li>
                             <li>Category: @Model.Category.CategoryName</li>
                             <li>Length: @Model.RunTime Minutes</li>
-                            <li>Rating: @Model.Rating out of 5</li>
+                            <li>Rating: @Model.AverageCalculation() out of 5</li>
 
                         </ul>
                         <p><strong>Synopsis:</strong> @Model.Synopsis</p>
                         <p><em>@Model.UserName</em></p>
                         <hr />
+
+                        <h3>Reviews</h3>
                         <div id="reviews-container">
-                            <h3>Reviews</h3>
                             @foreach (var review in Model.Reviews)
                             {
                                 <div class="user-review">

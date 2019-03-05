@@ -80,6 +80,7 @@ body {
 }
 
 #reviews-container {
+    max-height: 30rem;
     overflow: auto;
 }
 
