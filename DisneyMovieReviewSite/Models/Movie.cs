@@ -28,11 +28,15 @@ namespace DisneyMovieReviewSite.Models
                 totalRating += review.UserRating;
             }
 
-            decimal averageRating = totalRating / Reviews.Count;
-            
-            decimal roundRating = Math.Round(averageRating);
+            if (Reviews.Count >0)
+            {
+                decimal averageRating = totalRating / Reviews.Count;
 
-            AverageRating = roundRating;
+                decimal roundRating = Math.Round(averageRating, 1);
+
+                AverageRating = roundRating;
+            }
+            
 
             return AverageRating;
 
