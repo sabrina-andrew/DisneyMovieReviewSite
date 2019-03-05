@@ -23,52 +23,62 @@
             <li><a href="/Movie">MOVIES</a></li>
         </ul>
     </nav>
-
+    
     <!-- Section: Detail Card -->
     <section class="movie-details">
         <div class="container">
             <h1>Movie Details</h1>
             <div class="movie-container">
                 <article class="card">
-                    <img class="details-image" src="@Model.ImgPath" />
+                    <div class="image-and-back">
+                        <a href="/Movie">...Go Back</a>
+                        <img class="details-image" src="@Model.ImgPath" />
+                        <div class="movie-buttons">
+                            <div>
+                                <a href="/Movie/Edit/@Model.MovieID">
+                                    <input type="button" value="Edit Movie" class="btn btn-default" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/Movie/Delete/@Model.MovieID">
+                                    <input type="button" value="Delete Movie" class="btn btn-default" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div>
                         <h3>@Model.Name</h3>
                         <ul class="movie-info">
                             <li>Release Year: @Model.ReleaseYear</li>
                             <li>Category: @Model.Category.CategoryName</li>
                             <li>Length: @Model.RunTime Minutes</li>
-                            <li>Rating: @Model.Rating out of 5</li>
+                            <li>Rating: @Model.AverageCalculation() out of 5</li>
 
                         </ul>
                         <p><strong>Synopsis:</strong> @Model.Synopsis</p>
                         <p><em>@Model.UserName</em></p>
-                        <h3>Reviews</h3>
-                        @foreach (var review in Model.Reviews)
-                        {
-                        <div class="user-review">
-                            <p>@review.ReviewContent</p>
-                            <p>@review.UserRating out of 5</p>
-                            <p>@review.UserName</p>
-                            <a href="/Review/Delete/@review.ReviewID">Delete</a>
-                            <a href="/Review/Edit/@review.ReviewID">Edit</a>
-                        </div>
-                        }
+                        <hr />
 
-                        <div>
-                            <a href="/Movie/Edit/@Model.MovieID">
-                                <input type="button" value="Edit Movie" class="btn btn-default" />
-                            </a>
+                        <h3>Reviews</h3>
+                        <div id="reviews-container">
+                            @foreach (var review in Model.Reviews)
+                            {
+                                <div class="user-review">
+                                    <p>@review.ReviewContent</p>
+                                    <p>@review.UserRating out of 5</p>
+                                    <p>@review.UserName</p>
+                                    <a href="/Review/Delete/@review.ReviewID">Delete</a>
+                                    <a href="/Review/Edit/@review.ReviewID">Edit</a>
+                                </div>
+                            }
                         </div>
-                        <div>
-                            <a href="/Movie/Delete/@Model.MovieID">
-                                <input type="button" value="Delete Movie" class="btn btn-default" />
-                            </a>
-                        </div>
-                        <div>
+                        <div class="category-button">
                             <a href="/Review/Create/@Model.MovieID">
                                 <input type="button" value="Create Review" class="btn btn-default" />
                             </a>
                         </div>
+
                     </div>
                 </article>
             </div>

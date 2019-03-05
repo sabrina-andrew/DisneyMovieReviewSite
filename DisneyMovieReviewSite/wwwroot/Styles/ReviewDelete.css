@@ -1,0 +1,14 @@
+﻿#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.form-container {
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    padding: 2rem;
+    width: auto;
+    height: auto;
+}

@@ -1,4 +1,4 @@
-﻿
+﻿@model DisneyMovieReviewSite.Models.Category
 @{
     Layout = null;
 }
@@ -19,9 +19,28 @@
             <li><a href="/Home">HOME</a></li>
             <li><a href="/Category">CATEGORIES</a></li>
             <li><a href="/Movie">MOVIES</a></li>
-           
+
         </ul>
     </nav>
-    Category Details
+
+    <!-- Section: Category List-->
+    <section id="category-container">
+        <div class="category-header">
+            <h1>@Model.CategoryName</h1>
+        </div>
+        <div class="details-container">
+            @foreach (var movie in @Model.Movies)
+            {
+                <div class="details-info">
+                    <img src="@movie.ImgPath" />
+                    <a href="/Movie/Details/@movie.MovieID"><p>@movie.Name</p></a>
+                    <p>@movie.ReleaseYear</p>
+                    <p>@movie.AverageCalculation() out of 5</p>
+
+                </div>
+            }
+        </div>
+        <a href="/Category">Back to list</a>
+    </section>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿    azzq@import url('https://fonts.googleapis.com/css?family=Tangerine:700');
+﻿@import url('https://fonts.googleapis.com/css?family=Tangerine:700');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
 body {
@@ -17,6 +17,11 @@ img {
     display: inline-block;
     border: 1px solid black;
    
+}
+
+a {
+    margin: 0.5rem;
+    padding: 0;
 }
 
 .movies-container {

@@ -21,7 +21,7 @@
             <li><a href="/Home">HOME</a></li>
             <li><a href="/Category">CATEGORIES</a></li>
             <li><a href="/Movie">MOVIES</a></li>
-           
+
 
         </ul>
     </nav>
@@ -40,15 +40,16 @@
                             <a href="/Movie/Details/@movie.MovieID">@movie.Name</a>
                             <p>
                                 @movie.ReleaseYear <br>
-                            @movie.Rating out of 5 Stars
-                        </p>
-                    </div>
-                </li>
-            }
+                                @movie.AverageCalculation() out of 5 Stars
+                            </p>
+                        </div>
+                    </li>
+                }
             </ul>
 
         </div>
+        <a href="/Movie/Create" />Add a New Movie>
     </div>
-    <a href="/Movie/Create"/>Add a New Movie>
+
 </body>
 </html>
