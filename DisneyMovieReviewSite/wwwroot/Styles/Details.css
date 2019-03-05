@@ -20,6 +20,20 @@ body {
     box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     display: inline-block;
     font-size: 2rem;
+}   
+
+.image-and-back {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.image-and-back img{
+    max-width: 15rem;
+}
+
+.image-and-back a {
+    margin: 0.5rem;
 }
 
 #movie-details .movie-container {
@@ -48,7 +62,25 @@ body {
     
 }
 
+.movie-buttons {
+    display: flex;
+}
 
+.movie-buttons div {
+    margin: 0.5rem 0.25rem;
+}
 
+.user-review {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0.5rem;
+}
+
+.category-button {
+    margin: 0.5rem;
+}
+
+#reviews-container {
+    overflow: auto;
+}
 
 
