@@ -1,32 +1,19 @@
-﻿/* NavBar */
-#navbar {
-    display: flex;
-    position: sticky;
-    top: 0;
-    background: rgba(0,0,0,0.8);
-    justify-content: flex-end;
+﻿#category-container {
+    background: #E0E0E0;
+    margin: 2rem 5rem;
 }
 
-    #navbar ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        justify-content: center;
-        margin: 0.5rem;
-    }
+.category-header {
+    display: inline-block;  
+    font-size: 1.5rem;
+    padding: 0.5rem 3rem;
+    background: white;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
 
-        #navbar ul li a {
-            font-size: 1rem;
-            text-decoration: none;
-            transition: 0.3s ease-out;
-            padding: 3px;
-            margin: 0 0.25rem;
-            color: white;
-            transition: border 0.2s linear;
-        }
+.category-header h1 {
+    margin: 0;
+    padding: 0;
+}
 
-            #navbar ul li a:hover {
-                border: 1px solid white;
-                border-radius: 5px;
-                transition: border 0.2s linear;
-            }
+
