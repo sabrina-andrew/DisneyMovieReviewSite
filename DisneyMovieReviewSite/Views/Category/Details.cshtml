@@ -28,16 +28,18 @@
         <div class="category-header">
             <h1>@Model.CategoryName</h1>
         </div>
-        @foreach (var movie in @Model.Movies)
-        {
-            <div class="details-info">
-                <img src="@movie.ImgPath" />
-                <p>@movie.Name</p>
-                <p>@movie.ReleaseYear</p>
-                <p>@movie.Rating out of 5</p>
-                
-            </div>
-        }
+        <div class="details-container">
+            @foreach (var movie in @Model.Movies)
+            {
+                <div class="details-info">
+                    <img src="@movie.ImgPath" />
+                    <a href="/Movie/Details/@movie.MovieID"><p>@movie.Name</p></a>
+                    <p>@movie.ReleaseYear</p>
+                    <p>@movie.Rating out of 5</p>
+
+                </div>
+            }
+        </div>
 
     </section>
 </body>
