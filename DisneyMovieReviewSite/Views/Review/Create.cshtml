@@ -10,6 +10,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/Styles/Main.css" />
+    <link rel="stylesheet" href="~/Styles/ReviewCreate.css" />
     <title>Create</title>
 </head>
 <body>
@@ -20,41 +21,44 @@
             <li><a href="/Movie">MOVIES</a></li>
         </ul>
     </nav>
-    <h4>Review</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
 
-                    <input type="hidden" asp-for="MovieID" class="form-control" placeholder="@Model.MovieID">
+    <!-- Form -->
+    <section id="container">
+        <div class="form-container">
+            <h1>Review</h1>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+
+                            <input type="hidden" asp-for="MovieID" class="form-control" placeholder="@Model.MovieID">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ReviewContent" class="control-label"></label>
+                            <input asp-for="ReviewContent" class="form-control" />
+                            <span asp-validation-for="ReviewContent" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserRating" class="control-label"></label>
+                            <input asp-for="UserRating" class="form-control" />
+                            <span asp-validation-for="UserRating" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserName" class="control-label"></label>
+                            <input asp-for="UserName" class="form-control" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-default" />
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label asp-for="ReviewContent" class="control-label"></label>
-                    <input asp-for="ReviewContent" class="form-control" />
-                    <span asp-validation-for="ReviewContent" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="UserRating" class="control-label"></label>
-                    <input asp-for="UserRating" class="form-control" />
-                    <span asp-validation-for="UserRating" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="UserName" class="control-label"></label>
-                    <input asp-for="UserName" class="form-control" />
-                    <span asp-validation-for="UserName" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </form>
+            </div>
+            <a asp-action="Index">Back to List</a>
         </div>
-    </div>
-
-    <div>
-        <a asp-action="Index">Back to List</a>
-    </div>
+    </section>
 
 </body>
 </html>
