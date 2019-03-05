@@ -4,7 +4,7 @@
 }
 
 #container {
-    background: #ffd3da;
+    background: #0e0e0e;
     height: 100vh;
     top: 0;
 }
@@ -12,7 +12,7 @@
 .categories-container {
     display: flex;
     flex-direction: column;
-    margin: 0rem 10rem;
+    margin: 0 10rem;
   
 }
 
@@ -20,7 +20,7 @@
     display: inline-block;
     padding: 0.5rem;
     background: white;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     margin: 2rem 0.5rem;
     flex-wrap: wrap;
@@ -40,7 +40,7 @@
     flex-direction: column;
     background: white;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    border-radius: 5rem;
+    border-radius: 2px;
     width: 15rem;
     margin: 0.5rem;
 }
