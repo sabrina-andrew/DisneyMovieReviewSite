@@ -1,18 +1,15 @@
 ﻿using DisneyMovieReviewSite.Models;
 using DisneyMovieReviewSite.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace DisneyMovieReviewSite.Controllers
 {
     public class MovieController : Controller
     {
-        MovieRepository movieRepo;
+        IMovieRepository movieRepo;
 
-        public MovieController(MovieRepository movieRepo)
+        public MovieController(IMovieRepository movieRepo)
         {
             this.movieRepo = movieRepo;
         }
@@ -56,6 +53,8 @@ namespace DisneyMovieReviewSite.Controllers
             movieRepo.Delete(movie);
             return RedirectToAction("Index");
         }
+
+
         [HttpGet]
         public ViewResult Edit(int id)
         {

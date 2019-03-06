@@ -1,17 +1,15 @@
 ﻿using DisneyMovieReviewSite.Models;
 using DisneyMovieReviewSite.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace DisneyMovieReviewSite.Controllers
 {
     public class ReviewController : Controller
     {
-        ReviewRepository reviewRepo;
-        public ReviewController(ReviewRepository reviewRepo)
+        IReviewRepository reviewRepo;
+        public ReviewController(IReviewRepository reviewRepo)
         {
             this.reviewRepo = reviewRepo;
         }

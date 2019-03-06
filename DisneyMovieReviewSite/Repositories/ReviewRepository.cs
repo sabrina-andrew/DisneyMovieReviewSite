@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DisneyMovieReviewSite.Repositories
 {
-    public class ReviewRepository
+    public class ReviewRepository : IReviewRepository
     {
         MovieContext db;
         public ReviewRepository(MovieContext db)
