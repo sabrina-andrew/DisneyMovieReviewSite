@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\Images\Aladdin.gif" />
     <None Include="wwwroot\Images\Aladdin.jpeg" />
     <None Include="wwwroot\Images\LionKing.jpeg" />
     <None Include="wwwroot\Images\TheLittleMermaid.jpg" />

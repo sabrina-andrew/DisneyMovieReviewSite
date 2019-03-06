@@ -3,14 +3,16 @@ using DisneyMovieReviewSite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DisneyMovieReviewSite.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    partial class MovieContextModelSnapshot : ModelSnapshot
+    [Migration("20190306204113_AddedAdditionalSeedData")]
+    partial class AddedAdditionalSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -76,8 +78,7 @@ namespace DisneyMovieReviewSite.Migrations
                         new { MovieID = 6, AverageRating = 0m, CategoryID = 3, ImgPath = "/Images/BlackPanther.jpg", Name = "Black Panther", ReleaseYear = 2018, RunTime = 133, Synopsis = "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past." },
                         new { MovieID = 7, AverageRating = 0m, CategoryID = 1, ImgPath = "/Images/AliceInWonderland.jpg", Name = "Alice in Wonderland", ReleaseYear = 1951, RunTime = 75, Synopsis = "Alice stumbles into the world of Wonderland. Will she get home? Not if the Queen of Hearts has her way." },
                         new { MovieID = 8, AverageRating = 0m, CategoryID = 3, ImgPath = "/Images/HomewardBound.jpg", Name = "Homeward Bound: The Incredible Journey", ReleaseYear = 1993, RunTime = 84, Synopsis = "Three pets escape from a California ranch to find their owners in San Francisco." },
-                        new { MovieID = 9, AverageRating = 0m, CategoryID = 2, ImgPath = "/Images/Up.jpg", Name = "Up", ReleaseYear = 2009, RunTime = 96, Synopsis = "Seventy-eight year old Carl Fredricksen travels to Paradise Falls in his home equipped with balloons, inadvertently taking a young stowaway." },
-                        new { MovieID = 10, AverageRating = 0m, CategoryID = 2, ImgPath = "/Images/TheIncredibles.jpg", Name = "The Incredibles", ReleaseYear = 2004, RunTime = 115, Synopsis = "A family of undercover superheroes, while trying to live the quiet suburban life, are forced into action to save the world." }
+                        new { MovieID = 9, AverageRating = 0m, CategoryID = 2, ImgPath = "/Images/Up.jpg", Name = "Up", ReleaseYear = 2009, RunTime = 96, Synopsis = "Seventy-eight year old Carl Fredricksen travels to Paradise Falls in his home equipped with balloons, inadvertently taking a young stowaway." }
                     );
                 });
 
