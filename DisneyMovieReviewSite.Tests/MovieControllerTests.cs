@@ -1,4 +1,5 @@
 ﻿using DisneyMovieReviewSite.Controllers;
+using DisneyMovieReviewSite.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,18 @@ namespace DisneyMovieReviewSite.Tests
             var result = underTest.Details(1);
             
             Assert.IsType<ViewResult>(result);
+        }
+
+        [Fact]
+        public void Can_Create_Movie()
+        {
+            var movieRepo = new MovieRepository(null);
+            var underTest = new MovieController(movieRepo);
+            
+            var result = underTest.Create();
+
+            Assert.IsType<ViewResult>(result);
+
         }
 
     }

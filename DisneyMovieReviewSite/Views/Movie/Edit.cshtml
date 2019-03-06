@@ -56,15 +56,19 @@
                             <input asp-for="RunTime" class="form-control" />
                             <span asp-validation-for="RunTime" class="text-danger"></span>
                         </div>
-                        <div class="form-group">
-                            <label asp-for="UserName" class="control-label"></label>
-                            <input asp-for="UserName" class="form-control" />
-                            <span asp-validation-for="UserName" class="text-danger"></span>
-                        </div>
+                        @*<div class="form-group">
+            <label asp-for="UserName" class="control-label"></label>
+            <input asp-for="UserName" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>*@
                         <div class="form-group">
                             <label asp-for="CategoryID" class="control-label"></label>
-                            <input asp-for="CategoryID" class="form-control" />
-                            <span asp-validation-for="CategoryID" class="text-danger"></span>
+                            <select name="Category">
+                                <option value="1">Animation</option>
+                                <option value="2">Pixar</option>
+                                <option value="3">Live Action</option>
+                            </select>
+
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Save" class="btn btn-default" />
