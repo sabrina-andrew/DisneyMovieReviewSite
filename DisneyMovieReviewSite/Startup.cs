@@ -18,9 +18,9 @@ namespace DisneyMovieReviewSite
         {
             services.AddMvc();
             services.AddDbContext<MovieContext>();
-            services.AddScoped<MovieRepository, MovieRepository>();
-            services.AddScoped<CategoryRepository, CategoryRepository>();
-            services.AddScoped<ReviewRepository, ReviewRepository>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IReviewRepository, ReviewRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

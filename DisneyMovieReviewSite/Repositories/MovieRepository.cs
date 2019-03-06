@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DisneyMovieReviewSite.Repositories
 {
-    public class MovieRepository
+    public class MovieRepository : IMovieRepository
     {
         MovieContext db;
         public MovieRepository(MovieContext db)
@@ -40,6 +40,11 @@ namespace DisneyMovieReviewSite.Repositories
         {
             db.Update(movie);
             db.SaveChanges();
+        }
+
+        public Movie GetById(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

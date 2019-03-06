@@ -15,7 +15,5 @@ namespace DisneyMovieReviewSite.Tests
 
             Assert.IsType<ViewResult>(result);
         }
-
-       
     }
 }

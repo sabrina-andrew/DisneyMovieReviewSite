@@ -10,9 +10,9 @@ namespace DisneyMovieReviewSite.Controllers
 {
     public class CategoryController : Controller
     {
-        CategoryRepository categoryRepo;
+        ICategoryRepository categoryRepo;
 
-        public CategoryController(CategoryRepository categoryRepo)
+        public CategoryController(ICategoryRepository categoryRepo)
         {
             this.categoryRepo = categoryRepo;
         }
