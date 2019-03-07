@@ -9,6 +9,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Categories</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="~/Styles/Main.css" />
     <link rel="stylesheet" href="~/Styles/CategoryIndex.css" />
 </head>
@@ -28,17 +29,40 @@
             <header>
                 <h1>Movie Categories</h1>
             </header>
-            <div class="category-card">
-                @foreach (var category in Model)
-                {
-                    <a href="/Category/Details/@category.CategoryID">
+            <div class="category-box">
+                <div class="category-card">
+                    @foreach (var category in Model)
+                    {
+                        <a href="/Category/Details/@category.CategoryID">
 
-                        <div class="category">
-                            <h3>@category.CategoryName</h3>
-                            <p>@category.Description</p>
-                        </div>
-                    </a>
-                }
+                            <div class="category">
+                                <h3>@category.CategoryName</h3>
+                                <p>@category.Description</p>
+                            </div>
+
+                        </a>
+                    }
+                </div>
+                <div class="summary-card">
+                    <h3>Most Reviewed <i class="fas fa-award"></i></h3>
+                    @{ var reviewsNum = 0;}
+                    @foreach (var category in Model)
+                    {
+                        @foreach (var movie in category.Movies)
+                        {
+                            if (movie.Reviews.Count > reviewsNum)
+                            {
+                                reviewsNum = movie.Reviews.Count;
+                                <div class="most-card">
+                                    <img src="@movie.ImgPath" />
+                                    <a href="/Movie/Details/@movie.MovieID">@movie.Name</a>
+                                    <p>@movie.Category.CategoryName</p>
+                                    <p>@movie.Synopsis</p>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
             </div>
         </div>
     </section>
