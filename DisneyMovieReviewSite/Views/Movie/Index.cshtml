@@ -26,12 +26,20 @@
         </ul>
     </nav>
 
+
+    <!-- Section: Movies List -->
     <div class="movie-list">
-        <div class="movie-list-header">
-            <h1>Featured Movies</h1>
+        <div class="header-link-container">
+            <div class="movie-list-header">
+                <h1>Featured Movies</h1>
+            </div>
+            <div class="category-link">
+                
+                <a href="../Category/Index">Sort by Categories</a>
+            </div>
         </div>
         <div class="movies-container">
-            <ul>                
+            <ul>
                 @foreach (var movie in Model)
                 {
                     <li>
@@ -46,10 +54,9 @@
                     </li>
                 }
             </ul>
-
         </div>
-        <a href="/Movie/Create" />Add a New Movie>
     </div>
+    <a href="/Movie/Create" />Add a New Movie>
 
 </body>
 </html>
