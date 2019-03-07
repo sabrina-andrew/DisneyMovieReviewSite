@@ -36,17 +36,22 @@
                             <input type="hidden" asp-for="MovieID" class="form-control" placeholder="@Model.MovieID">
                         </div>
                         <div class="form-group">
-                            <label asp-for="ReviewContent" class="control-label"></label>
+                            <label asp-for="ReviewContent" class="control-label">Your Review</label>
                             <input asp-for="ReviewContent" class="form-control" />
                             <span asp-validation-for="ReviewContent" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="UserRating" class="control-label"></label>
-                            <input asp-for="UserRating" class="form-control" />
-                            <span asp-validation-for="UserRating" class="text-danger"></span>
+                            <label asp-for="UserRating" class="control-label">Rating (1-5)</label>
+                            <select name="UserRating">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label asp-for="UserName" class="control-label"></label>
+                            <label asp-for="UserName" class="control-label">Username</label>
                             <input asp-for="UserName" class="form-control" />
                             <span asp-validation-for="UserName" class="text-danger"></span>
                         </div>
@@ -56,7 +61,7 @@
                     </form>
                 </div>
             </div>
-            <a asp-action="Index">Back to List</a>
+            <a asp-action="../Movie/Index">Back to List</a>
         </div>
     </section>
 

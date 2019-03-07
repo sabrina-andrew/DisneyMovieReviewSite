@@ -45,6 +45,7 @@
     border-radius: 2px;
     width: 22rem;
     margin: 0.5rem;
+    height: 6rem;
 }
 
 .category:hover {
@@ -56,4 +57,35 @@
     text-align: center;
 }
 
+.most-card 
+{
+    display: flex;
+    
+}
 
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+
+}
+
+.summary-card {
+    margin: 0.5rem;
+    margin-top: 2rem;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    border-radius: 2px;
+
+}
+
+.summary-card h3{
+    margin: 0.5rem;
+    padding-top: 1rem;
+}
+
+img{
+    max-height: 15rem;
+    border: 1px solid black;
+    margin: 0.5rem;
+}

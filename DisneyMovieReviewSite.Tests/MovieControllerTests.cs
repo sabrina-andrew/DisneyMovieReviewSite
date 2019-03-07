@@ -1,9 +1,7 @@
 ﻿using DisneyMovieReviewSite.Controllers;
 using DisneyMovieReviewSite.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 using NSubstitute;
 using DisneyMovieReviewSite.Models;

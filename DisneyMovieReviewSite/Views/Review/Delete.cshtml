@@ -38,19 +38,19 @@
                         @Html.DisplayFor(model => model.Movie.Name)
                     </dd>
                     <dt>
-                        @Html.DisplayNameFor(model => model.ReviewContent)
+                        Review
                     </dt>
                     <dd>
                         @Html.DisplayFor(model => model.ReviewContent)
                     </dd>
                     <dt>
-                        @Html.DisplayNameFor(model => model.UserRating)
+                        Rating
                     </dt>
                     <dd>
                         @Html.DisplayFor(model => model.UserRating)
                     </dd>
                     <dt>
-                        @Html.DisplayNameFor(model => model.UserName)
+                        Username
                     </dt>
                     <dd>
                         @Html.DisplayFor(model => model.UserName)
@@ -60,7 +60,7 @@
                 <form asp-action="Delete">
                     <input type="hidden" asp-for="ReviewID" />
                     <input type="submit" value="Delete" class="btn btn-default" /> |
-                    <a asp-action="Index">Back to List</a>
+                    <a asp-action="../Movie/Details/@Model.Movie.MovieID">Back to List</a>
                 </form>
             </div>
         </div>
