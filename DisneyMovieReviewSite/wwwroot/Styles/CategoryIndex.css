@@ -45,6 +45,7 @@
     border-radius: 2px;
     width: 22rem;
     margin: 0.5rem;
+    height: 6rem;
 }
 
 .category:hover {
@@ -56,4 +57,20 @@
     text-align: center;
 }
 
+.most-card 
+{
+    display: flex;
+    
+}
 
+.movie-info
+{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.summary-card
+{
+    background-color: white;
+}
