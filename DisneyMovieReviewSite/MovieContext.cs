@@ -138,9 +138,9 @@ namespace DisneyMovieReviewSite
 
             modelBuilder.Entity<Category>().HasData(
 
-               new Category() { CategoryID = 1, CategoryName = "Animation", Description = "Animation description" },
-               new Category() { CategoryID = 2, CategoryName = "Pixar", Description = "Pixar description" },
-               new Category() { CategoryID = 3, CategoryName = "Live Action", Description = "Live Action Description" }
+               new Category() { CategoryID = 1, CategoryName = "Animation", Description = "Disney classics and newer animated releases." },
+               new Category() { CategoryID = 2, CategoryName = "Pixar", Description = "Computer generated films produced by Pixar." },
+               new Category() { CategoryID = 3, CategoryName = "Live Action", Description = "Includes action involving real people or animals, as contrasted with animation or computer-generated effects." }
                 );
 
             modelBuilder.Entity<Review>().HasData(
