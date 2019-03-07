@@ -50,22 +50,22 @@
                             <span asp-validation-for="Synopsis" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="ImgPath" class="control-label"></label>
+                            <label asp-for="ImgPath" class="control-label">Image URL</label>
                             <input asp-for="ImgPath" class="form-control" />
                             <span asp-validation-for="ImgPath" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="ReleaseYear" class="control-label"></label>
+                            <label asp-for="ReleaseYear" class="control-label">Release Year</label>
                             <input asp-for="ReleaseYear" class="form-control" />
                             <span asp-validation-for="ReleaseYear" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="RunTime" class="control-label"></label>
+                            <label asp-for="RunTime" class="control-label">Run Time</label>
                             <input asp-for="RunTime" class="form-control" />
                             <span asp-validation-for="RunTime" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="CategoryID" class="control-label"></label>
+                            <label asp-for="CategoryID" class="control-label">Category</label>
                             <select name="CategoryID">
                                 <option value="1">Animation</option>
                                 <option value="2">Pixar</option>
@@ -81,7 +81,7 @@
             </div>
 
             <div>
-                <a asp-action="Index">Back to List</a>
+                <a asp-action="../Movie/Index/">Back to List</a>
             </div>
         </div>
     </section>
