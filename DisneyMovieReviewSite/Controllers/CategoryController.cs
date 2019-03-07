@@ -1,10 +1,5 @@
-﻿using DisneyMovieReviewSite.Models;
-using DisneyMovieReviewSite.Repositories;
+﻿using DisneyMovieReviewSite.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DisneyMovieReviewSite.Controllers
 {

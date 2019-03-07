@@ -37,7 +37,7 @@
                             <input type="hidden" asp-for="MovieID" class="form-control" placeholder="@Model.MovieID">
                         </div>
                         <div class="form-group">
-                            <label asp-for="ReviewContent" class="control-label"></label>
+                            <label asp-for="ReviewContent" class="control-label">Your Review</label>
                             <input asp-for="ReviewContent" class="form-control" />
                             <span asp-validation-for="ReviewContent" class="text-danger"></span>
                         </div>
@@ -52,7 +52,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label asp-for="UserName" class="control-label"></label>
+                            <label asp-for="UserName" class="control-label">Username</label>
                             <input asp-for="UserName" class="form-control" />
                             <span asp-validation-for="UserName" class="text-danger"></span>
                         </div>

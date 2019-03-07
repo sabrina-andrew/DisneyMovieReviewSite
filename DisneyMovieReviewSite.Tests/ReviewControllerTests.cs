@@ -3,9 +3,7 @@ using DisneyMovieReviewSite.Models;
 using DisneyMovieReviewSite.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using NSubstitute;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace DisneyMovieReviewSite.Tests
