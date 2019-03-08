@@ -34,19 +34,9 @@ namespace DisneyMovieReviewSite.Models
 
                 AverageRating = roundRating;
             }
-            
-
             return AverageRating;
-
         }
-
-
-
-
     }
-
-
-    
 }
 
 

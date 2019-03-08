@@ -22,7 +22,5 @@ namespace DisneyMovieReviewSite.Controllers
             var model = categoryRepo.GetByID(id);
             return View(model);
         }
-
-   
     }
 }
