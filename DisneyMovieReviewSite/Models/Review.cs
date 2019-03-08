@@ -3,7 +3,6 @@ namespace DisneyMovieReviewSite.Models
 {
     public class Review
     {
-        
         public int ReviewID { get; set; }
         public int MovieID { get; set; }
         public virtual Movie Movie { get; set; }

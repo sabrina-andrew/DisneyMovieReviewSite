@@ -11,7 +11,7 @@ namespace DisneyMovieReviewSite.Repositories
         MovieContext db;
         public CategoryRepository(MovieContext db)
         {
-            this.db = db; 
+            this.db = db;
         }
         public Category GetCategory(int id)
         {
